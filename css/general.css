@@ -1,0 +1,127 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+Font Size System
+ 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-Font weights
+Default: 400
+Medium 500
+SemiBold 600
+Bold Italic 700
+
+-Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+-Letter spacing
+-0.5px
+0.75px
+
+ SPACING System (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ 
+ --- 02 COLORS
+ Brand color: #006617
+ Tints: 
+ #e6f0e8
+ #cce0d1
+ #4d945d
+
+ Shades:
+ #005c15
+ #001405
+ Accents:
+ Greys: #000
+ #1f1f1f
+ #333
+ 
+ --- 05 SHADOWS
+
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+ 
+ --- BOREDER-RADIUS
+ 
+ Default: 9px
+ Medium: 11px
+
+ --- WHITESPACE
+SPACING System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+:root {
+    --colorprimary: black;
+    --colorsecondary: white;
+    --coloraccent: #FF9F1C;
+    --colorpink: #C08497;
+    --ff: "Montserrat", sans-serif;
+    --h1: bold 5.4rem/6.4rem var(--ff);
+    --h2: 3.6rem/3.6rem var(--ff);
+    --h3: bold 2.4rem/3rem var(--ff);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--colorprimary);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+
+/*********************************/
+/* General  REUSABLE Components*/
+/*********************************/
+
+.container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    row-gap: 8.4rem;
+    column-gap: 6.4rem;
+}
+
+.grid--2-cols {
+    grid-template: repeat(2, 1fr);
+}
+
+
+.heading-primary {
+    color: var(--coloraccent);
+    font-size: 9.6rem;
+    margin-top: 15rem;
+    margin-bottom: 6rem;
+}
+
+.heading-secondary {
+    color: var(--colorsecondary);
+    font: var(--h2);
+
+}
+
+.btn:link,
+.btn:visited {
+    background-color: var(--colorsecondary);
+    color: var(--colorprimary);
+    text-decoration: none;
+    font-size: 3.6rem;
+    padding: 1.2rem 3.2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+
+
+}
